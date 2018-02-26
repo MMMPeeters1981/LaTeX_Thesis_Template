@@ -1,0 +1,78 @@
+\documentclass[10pt]{mythesis}
+
+\bibliography{ref-thesis.bib}
+
+\title{ {\vspace{3em} 
+\Huge Title} 
+\vspace{4em}\\
+{\Large subtitle part 1
+\\[0.3em] subtitle part 2}
+\vfill }
+
+\author{}
+
+\date{}
+
+% the\ includeonly command is very useful when working on one
+% particular chapter, because it decreases compilation time.
+% It uses the available .aux files for the remaining chapters (the ones not 
+% included the includeonly-command) for building the ToC and cross-references
+% so you don't lose that information, but your output file contains
+% only the titlepage, ToC, and the included chapter(s).
+
+%\includeonly{Printpage}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\include{Printpage}
+\include{Titlepage}
+\include{Contributors}
+\include{Motto}
+
+\pagenumbering{roman}
+
+{\pagestyle{plain} \tableofcontents
+\addtocontents{toc}{~\hfill\sffamily\textbf{Page}\par}
+\cleardoublepage}
+
+\include{Acknowledgments}
+
+\mainmatter
+
+\include{Chapter1}
+
+\include{IntroP1}
+\include{Chapter4}
+
+\include{IntroAp}
+\include{Appendix}
+
+\backmatter
+
+\include{Bibliography}
+
+\include{Summary}
+\include{Samenvatting}
+\include{CV}
+
+\include{Siks}
+
+\end{document}
+
+% General remarks/tips/tricks (notes to self):
+
+%\section*{} etc keeps that section or chapter from being published in the 
+% table of contents. It won't be numbered either, though. 
+
+% Placing a shorter titlebetween squared brackets [ ]
+% such as \section[short title]{really longlong long title}
+% publishes the short title in the ToC and in the headers
+
+% if you use an abbreviation containing a dot and you don't
+% want it to look like a period, you can use \ to stop the creation
+% of extra space (As if it were the end of the sentence),
+% like so: i.e.\
