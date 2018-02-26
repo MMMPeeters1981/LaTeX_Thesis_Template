@@ -28,6 +28,4 @@ thesis.
 
 Use the figures folder to document all your images.
 
-If you have any questions, please feel free to ask them: m.m.m.peeters[at]tudelft.nl
-
 Comments are placed in the files themselves for more details. (always after a %)
